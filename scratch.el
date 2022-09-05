@@ -1,3 +1,4 @@
+
 (require 'ert)
 
 ;;; Test helpers...
@@ -11,9 +12,10 @@
      (/ (logand #xFF rgb) 255.0))))
 
 (defun hex-cie-de2000 (hex-a hex-b) 
-  (let ((lab-1 (color-srgb-to-lab (hex-to-srgb hex-a)))
-        (lab-2 (color-srgb-to-lab (hex-to-srgb hex-b))))
+  (let ((lab-1 (apply 'color-srgb-to-lab (hex-to-srgb hex-a)))
+        (lab-2 (apply 'color-srgb-to-lab (hex-to-srgb hex-b))))
      (color-cie-de2000 lab-1 lab-2)))
         
-(ert-deftest "Test CIE-DE2000" ()
-             (should (eql (hex-cie-de2000 "#000000" "#000000") 0.0)))
+(ert-deftest test-cie-de2000 ()
+  "Test CIE-DE2000"
+  (should (eql (hex-cie-de2000 "#000000" "#000000") 0.0)))
