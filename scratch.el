@@ -28,4 +28,5 @@
   (should (eql (hex-cie-de2000 "#000000" "#000000") 0.0))) 
 
 ;; We can exercise the test subject more than this,
-;; but one test that expects the correct result is enough for an initial compatibility test.
+;; but one test that expects the correct result is enough 
+;; for an initial compatibility test.
