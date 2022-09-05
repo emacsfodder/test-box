@@ -1,5 +1,14 @@
-# test-box
+
+
+# Test-box
+
 A space used for running compatibility tests on different Emacs versions.
+
+# Usage
+
+Setup at least one test in [`scratch.el`](./scratch.el), commit and let github give you test results.
+
+# Emacs Versions tested against...
 
 - [x] 24.1
 - [x] 24.2
