@@ -1,4 +1,4 @@
-name: Autothemer Tests
+name: Emacs Test Box 
 
 on:
   push:
