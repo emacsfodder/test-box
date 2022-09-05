@@ -1,2 +1,22 @@
 # test-box
-A space used for running compatibility tests on Emacs 24.1-snapshot.
+A space used for running compatibility tests on different Emacs versions.
+
+- [x] 24.1
+- [x] 24.2
+- [x] 24.3
+- [x] 24.4
+- [x] 24.5
+- [x] 25.1
+- [x] 25.2
+- [x] 25.3
+- [x] 26.1
+- [x] 26.2
+- [x] 26.3
+- [x] 27.1
+- [x] 27.2
+- [x] 28.1
+- [x] snapshot (29.1 currently)
+
+Add tests / functions to `./scratch.el`.  
+
+Github Workflows actions will test using [purcell/setup-emacs](https://github.com/purcell/setup-emacs)
