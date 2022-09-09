@@ -34,12 +34,29 @@ jobs:
       uses: purcell/setup-emacs@v3.0
       with:
         version: ${{ matrix.emacs_version }}
+        
+    - uses: actions/cache@v2
+        id: cache-cask-packages
+        with:
+          path: .cask
+          key: cache-cask-packages-000
+    - uses: actions/cache@v2
+        id: cache-cask-executable
+        with:
+          path: ~/.cask
+          key: cache-cask-executable-000
+    - uses: cask/setup-cask@master
+        if: steps.cache-cask-executable.outputs.cache-hit != 'true'
+        with:
+          version: snapshot
+    - run: echo "$HOME/.cask/bin" >> $GITHUB_PATH        
 
     - name: Test
       run: |
         emacs --batch \
         -eval "(setq load-prefer-newer t)" \
         -eval "(add-to-list 'load-path \".\")" \
+        -eval "()" \
         -l ert \
         -l scratch.el \
         -f ert-run-tests-batch-and-exit
