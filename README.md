@@ -1,5 +1,7 @@
 # Test-box [![Emacs Test Box](https://github.com/emacsfodder/test-box/actions/workflows/test-box.yml/badge.svg)](https://github.com/emacsfodder/test-box/actions/workflows/test-box.yml)
 
+![test-box](https://user-images.githubusercontent.com/71587/189322522-e2a743ae-4bbf-4b18-83aa-fb56661603a8.png)
+
 A space used for running compatibility tests on different Emacs versions.  Also a reasonable template for setting up CI testing for an Emacs Package.
 
 # Usage
