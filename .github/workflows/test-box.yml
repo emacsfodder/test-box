@@ -4,6 +4,7 @@ on:
   push:
     branches: 
       - master
+      - etd
   pull_request:
 
 jobs:
